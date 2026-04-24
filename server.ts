@@ -16,7 +16,7 @@ async function startServer() {
   app.use(express.json());
 
   // API Route for Telegram Booking
-  app.post("/api/booking", async (req, res) => {
+  app.post("https://cafe-gach-production.up.railway.app/api/booking", async (req, res) => {
     const { name, phone, people, time } = req.body;
     const token = process.env.TELEGRAM_BOT_TOKEN;
     const chatId = process.env.TELEGRAM_CHAT_ID;
