@@ -17,28 +17,37 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
     time: ''
   });
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+  setLoading(true);
 
-    try {
-      const response = await fetch('/api/booking', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
-      });
-
-      if (response.ok) {
-        setStep('success');
-      } else {
-        console.error('Booking failed');
+  try {
+    const response = await fetch(
+      "https://cafe-gach-production.up.railway.app/api/booking",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
       }
-    } catch (error) {
-      console.error('Error submitting booking:', error);
-    } finally {
-      setLoading(false);
+    );
+
+    const data = await response.json();
+    console.log(data);
+
+    if (response.ok) {
+      setStep("success");
+    } else {
+      alert("Đặt bàn thất bại");
     }
-  };
+  } catch (error) {
+    console.error(error);
+    alert("Lỗi kết nối server");
+  } finally {
+    setLoading(false);
+  }
+};
 
   const handleClose = () => {
     onClose();
