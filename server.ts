@@ -11,7 +11,7 @@ const __dirname = path.dirname(__filename);
 
 async function startServer() {
   const app = express();
-  const PORT = 3000;
+  const PORT = process.env.PORT || 3000;
 
   app.use(express.json());
 
@@ -29,11 +29,11 @@ async function startServer() {
     try {
       const text = `
 📢 GẠCH CAFE - BOOKING
-
-👤 ${name}
-📞 ${phone}
-👥 ${people}
-⏰ ${time}
+  (Yêu cầu đặt bàn mới)
+👤 Khánh hàng: ${name}
+📞 SĐT: ${phone}
+👥 Số người: ${people}
+⏰ Thời gian: ${time}
       `;
       
       const response = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
