@@ -35,14 +35,14 @@ export default function Location({ onBookingClick }: { onBookingClick: () => voi
                 <div className="w-10 h-[1px] bg-brick mt-3 opacity-20 shrink-0 group-hover:w-14 group-hover:bg-terracotta group-hover:opacity-100 transition-all duration-500"></div>
                 <div>
                   <h4 className="label-caps text-brick mb-3">Thời gian</h4>
-                  <p className="text-brick/60 text-sm leading-relaxed uppercase tracking-wider">Mở cửa hàng ngày: 07:00 – 22:30</p>
+                  <p className="text-brick/60 text-sm leading-relaxed uppercase tracking-wider">Mở cửa hàng ngày: 06:00 – 23:00</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-8 group">
                 <div className="w-10 h-[1px] bg-brick mt-3 opacity-20 shrink-0 group-hover:w-14 group-hover:bg-terracotta group-hover:opacity-100 transition-all duration-500"></div>
                 <div>
-                  <h4 className="label-caps text-brick mb-3">Đường dây nóng</h4>
+                  <h4 className="label-caps text-brick mb-3">Số điện thoại</h4>
                   <p className="text-brick/60 text-sm leading-relaxed uppercase tracking-wider">0918526646 — hello@gachcafe.vn</p>
                 </div>
               </div>
