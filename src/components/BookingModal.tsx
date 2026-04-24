@@ -22,7 +22,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
     setLoading(true);
 
     try {
-      const response = await fetch('/api/booking', {
+      const response = await fetch('https://cafe-gach-production.up.railway.app/api/booking', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
