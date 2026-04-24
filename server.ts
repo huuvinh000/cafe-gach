@@ -29,11 +29,11 @@ async function startServer() {
     try {
       const text = `
 📢 GẠCH CAFE - BOOKING
-
-👤 ${name}
-📞 ${phone}
-👥 ${people}
-⏰ ${time}
+  (Yêu cầu đặt bàn mới)
+👤 Khánh hàng: ${name}
+📞 SĐT: ${phone}
+👥 Số người: ${people}
+⏰ Thời gian: ${time}
       `;
       
       const response = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
