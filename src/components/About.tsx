@@ -43,7 +43,7 @@ export default function About() {
           >
             <div className="aspect-[4/5] overflow-hidden rounded-2xl shadow-2xl relative z-10 grayscale-[0.2] hover:grayscale-0 transition-all duration-700">
               <img 
-                src="https://res.cloudinary.com/dtcwty83a/image/upload/v1777035120/Screenshot_2026-04-24_195032_hd5ywh.png" 
+                src="https://res.cloudinary.com/dtcwty83a/image/upload/v1777035112/Screenshot_2026-04-24_195048_zt2qdo.png" 
                 alt="Cafe Interior" 
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
                 referrerPolicy="no-referrer"
